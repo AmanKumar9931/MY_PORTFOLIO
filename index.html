@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Aman Kumar &mdash; Data Science Student | AI, ML & Analytics Portfolio</title>
+  <meta name="description" content="Aman Kumar &mdash; Data Science student specializing in Python, Data Analytics, Machine Learning, Power BI and Data Visualization. B.Tech CSE at Lovely Professional University.">
+  <meta name="keywords" content="Aman Kumar, Data Science, Machine Learning, Data Analytics, Python, Power BI, SQL, Computer Vision, Lovely Professional University, Portfolio">
+  <meta name="author" content="Aman Kumar">
+  <meta name="theme-color" content="#050505">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Aman Kumar &mdash; Data Science Student & AI Explorer">
+  <meta property="og:description" content="Turning data into insights, visualizations and intelligent solutions. Explore projects in Computer Vision, Rainfall Analytics & Web Development.">
+  <meta property="og:image" content="assets/images/pic.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23050505'/><text x='50' y='65' font-family='sans-serif' font-weight='900' font-size='50' fill='%2300F0FF' text-anchor='middle'>AK</text></svg>">
+
+  <!-- Premium Typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css?v=intro-video-controls">
+</head>
+<body class="bg-black text-slate-100 selection:bg-cyan-500/30 selection:text-cyan-200">
+  <!-- Cinematic Preloader -->
+  <div id="preloader" class="preloader-overlay" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+    <div class="preloader-content">
+      <div class="preloader-logo-container">
+        <div class="logo-hologram">
+          <div class="hologram-ring ring-1"></div>
+          <div class="hologram-ring ring-2"></div>
+          <span class="logo-ak">AK</span>
+        </div>
+        <div class="logo-name">Aman Kumar</div>
+        <div class="logo-role">DATA SCIENCE</div>
+      </div>
+
+      <div class="preloader-progress-wrap">
+        <div class="progress-bar-container">
+          <div class="progress-bar-fill" id="preloader-bar"></div>
+          <div class="progress-glow"></div>
+        </div>
+        <div class="preloader-meta">
+          <span class="preloader-status" id="preloader-status">INITIALIZING SYSTEM TENSORS...</span>
+          <span class="preloader-counter font-mono" id="preloader-counter">00%</span>
+        </div>
+      </div>
+
+      <div class="preloader-data-stream font-mono text-[10px] text-cyan-500/40">
+        <span>MODEL: RANDOM_FOREST</span> &middot; <span>ACCURACY: 95.8%</span> &middot; <span>TENSORS: 4096</span> &middot; <span>STATUS: READY</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="hero-video-overlay" class="hero-video-container" aria-label="Introduction video" aria-hidden="true">
+    <video id="intro-video" class="intro-video-element" muted playsinline preload="auto" poster="assets/images/aman.png">
+      <source src="assets/videos/intro.mp4" type="video/mp4">
+    </video>
+    <div class="video-overlay-gradient" aria-hidden="true"></div>
+    <div class="video-hud">
+      <div class="video-controls">
+        <span class="video-tag"><span class="rec-dot" aria-hidden="true"></span> INTRODUCTION</span>
+        <button id="mute-intro-button" class="skip-intro-button mute-intro-button" type="button" aria-label="Unmute intro video" aria-pressed="false">Unmute sound</button>
+      </div>
+      <button id="skip-intro-button" class="skip-intro-button" type="button">Skip intro <span aria-hidden="true">&rarr;</span></button>
+    </div>
+  </section>
+
+  <!-- Three.js 3D Background Canvas -->
+  <div id="canvas-container" class="canvas-background-fixed" aria-hidden="true">
+    <canvas id="webgl-canvas"></canvas>
+    <div class="noise-overlay"></div>
+    <div class="radial-vignette"></div>
+  </div>
+
+  <!-- Floating Navigation -->
+  <header class="site-header" id="navbar">
+    <nav class="nav-container glass-panel" aria-label="Main Navigation">
+      <a href="#hero" class="nav-brand group" aria-label="Aman Kumar Portfolio Home">
+        <div class="brand-monogram">
+          <span>AK</span>
+          <div class="brand-glow"></div>
+        </div>
+        <div class="brand-text">
+          <span class="brand-title">Aman Kumar</span>
+          <span class="brand-badge">Data Science</span>
+        </div>
+      </a>
+
+      <div class="nav-links-desktop">
+        <a href="#hero" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#training" class="nav-link">Training</a>
+        <a href="#credentials" class="nav-link">Credentials</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#journey" class="nav-link">Journey</a>
+      </div>
+
+      <div class="nav-actions">
+        <a href="https://drive.google.com/file/d/1bGQkqpgZ0EffJX7KNTA0qETo5NYR_Jd6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-ghost-sm" title="View Resume">
+          <svg class="icon-sm text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+          <span>Resume</span>
+        </a>
+        <a href="#contact" class="btn-primary-sm">
+          <span>Contact</span>
+          <svg class="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+        <!-- Mobile Menu Hamburger -->
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Mobile Drawer -->
+    <div id="mobile-menu" class="mobile-menu-drawer glass-panel" aria-hidden="true">
+      <div class="mobile-menu-links">
+        <a href="#hero" class="mobile-link">About</a>
+        <a href="#skills" class="mobile-link">Technical Skills</a>
+        <a href="#projects" class="mobile-link">Projects</a>
+        <a href="#training" class="mobile-link">Training</a>
+        <a href="#credentials" class="mobile-link">Credentials</a>
+        <a href="#education" class="mobile-link">Education</a>
+        <a href="#journey" class="mobile-link">Roadmap</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </div>
+      <div class="mobile-menu-footer">
+        <a href="https://drive.google.com/file/d/1bGQkqpgZ0EffJX7KNTA0qETo5NYR_Jd6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-sm w-full text-center">View Resume (Drive) &#x2197;</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Flow -->
+  <main id="smooth-wrapper">
+    <div id="smooth-content">
+
+      <!-- ============================================ -->
+      <!-- 01. HERO SECTION                             -->
+      <!-- ============================================ -->
+      <section id="hero" class="hero-section" aria-label="Introduction">
+        <div class="section-container hero-grid">
+          
+          <!-- Left Column: Typography & CTAs -->
+          <div class="hero-content">
+            <h1 class="hero-headline" data-reveal="hero-title">
+              <span class="hero-greet">Hi, I'm</span>
+              <span class="hero-name-gradient">Aman Kumar</span>
+            </h1>
+
+            <!-- Dynamic Animated Role Switcher -->
+            <div class="hero-role-wrapper font-mono" data-reveal="fade">
+              <span class="role-prefix">&gt; </span>
+              <span id="hero-typewriter" class="typewriter-text text-cyan-400">Data Science Student</span>
+              <span class="typewriter-cursor">_</span>
+            </div>
+
+            <p class="hero-subtitle" data-reveal="fade">
+              B.Tech Computer Science student at Lovely Professional University, focused on data science and analytics.
+            </p>
+
+            <p class="hero-supporting-text" data-reveal="fade">
+              I use Python, SQL, and Power BI to explore data, develop clear visualizations, and communicate useful findings.
+            </p>
+
+            <p class="hero-supporting-text hero-supporting-text-alt" data-reveal="fade">
+              My projects span rainfall analytics, computer vision, and dashboard development. I’m building practical skills in machine learning and turning analysis into informed decisions.
+            </p>
+
+            <!-- Action CTAs -->
+            <div class="hero-cta-group" data-reveal="fade">
+              <a href="#projects" class="btn-primary magnetic-btn">
+                <span>Explore Projects</span>
+                <svg class="icon-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+                <div class="btn-glow"></div>
+              </a>
+
+              <a href="https://drive.google.com/file/d/1bGQkqpgZ0EffJX7KNTA0qETo5NYR_Jd6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-secondary magnetic-btn" title="View official resume">
+                <svg class="icon-btn text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+                <span>View Resume &#x2197;</span>
+              </a>
+
+              <a href="#contact" class="btn-ghost magnetic-btn">
+                <span>Contact Me</span>
+                <svg class="icon-btn" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+              </a>
+            </div>
+
+            <!-- Social Links & Verification Pills -->
+            <div class="hero-social-strip" data-reveal="fade">
+              <span class="social-label font-mono text-xs text-slate-400">CONNECT:</span>
+              <a href="https://github.com/AmanKumar9931" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                <span>GitHub</span>
+              </a>
+              <a href="http://www.linkedin.com/in/aman79/" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+              <a href="mailto:amanrajputjee122@gmail.com" class="social-pill" aria-label="Direct Email">
+                <svg class="w-4 h-4 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Email</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-visual-col" data-reveal="fade">
+            <div class="hero-photo-panel">
+              <div class="hero-photo-wrap">
+                <img src="assets/images/aman.png" alt="Aman Kumar, data science student" class="hero-photo-image" />
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 03. TECHNICAL SKILLS SECTION                 -->
+      <!-- ============================================ -->
+      <section id="skills" class="skills-section" aria-label="Technical Skills">
+        <div class="section-container">
+          <div class="section-header text-center">
+            <span class="section-pill font-mono text-cyan-400">TECHNICAL ARSENAL</span>
+            <h2 class="section-title split-text">
+              Tools I use to <span class="gradient-text">decode data.</span>
+            </h2>
+            <p class="section-subtitle">
+              Every tool, library, and framework mastered to convert unstructured datasets into deterministic intelligent workflows.
+            </p>
+
+            <!-- Skill Category Filter Tabs -->
+            <div class="skills-filter-nav" role="tablist">
+              <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+              <button class="filter-tab" data-filter="languages" role="tab" aria-selected="false">Languages</button>
+              <button class="filter-tab" data-filter="tools" role="tab" aria-selected="false">Tools & Platforms</button>
+              <button class="filter-tab" data-filter="areas" role="tab" aria-selected="false">Technical Areas</button>
+              <button class="filter-tab" data-filter="web" role="tab" aria-selected="false">Web Technologies</button>
+            </div>
+          </div>
+
+          <!-- Skills 3D Cards Grid -->
+          <div class="skills-grid" id="skills-grid-container">
+
+            <!-- Category: LANGUAGES -->
+            <div class="skill-card glass-panel" data-category="languages" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-python" aria-label="Python"><span>Py</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-cyan-400/80">LANGUAGE</span>
+                  <h4 class="skill-name">Python</h4>
+                  <p class="skill-desc">5-Star HackerRank &middot; Pandas, NumPy, OpenCV, ML Pipelines</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 95%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="languages" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-cpp" aria-label="C++"><span>C++</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-blue-400/80">LANGUAGE</span>
+                  <h4 class="skill-name">C++</h4>
+                  <p class="skill-desc">Data Structures, Algorithms & High-Performance Problem Solving</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 85%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="languages" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-c" aria-label="C"><span>C</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-slate-400">LANGUAGE</span>
+                  <h4 class="skill-name">C</h4>
+                  <p class="skill-desc">Low-level systems programming, memory management & pointer logic</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 80%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="languages" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-java" aria-label="Java"><span>J</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-amber-400/80">LANGUAGE</span>
+                  <h4 class="skill-name">Java</h4>
+                  <p class="skill-desc">Object-Oriented Programming, enterprise architecture principles</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 78%"></span></div>
+              </div>
+            </div>
+
+            <!-- Category: TOOLS & PLATFORMS -->
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-powerbi" aria-label="Power BI"><span>PB</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-yellow-400/80">BI PLATFORM</span>
+                  <h4 class="skill-name">Power BI</h4>
+                  <p class="skill-desc">Interactive dashboards, 10+ visualizations, KPI reporting</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-dax" aria-label="DAX"><span>DAX</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-cyan-400/80">ANALYTICS FORMULAS</span>
+                  <h4 class="skill-name">DAX</h4>
+                  <p class="skill-desc">Data Analysis Expressions, calculated measures, time intelligence</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 88%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-query" aria-label="Power Query"><span>PQ</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-blue-400/80">ETL & DATA TRANSFORM</span>
+                  <h4 class="skill-name">Power Query</h4>
+                  <p class="skill-desc">Full Power Query workflows for ETL, M-language transformations, merges, schema cleanup, and data modeling</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-pandas" aria-label="Pandas"><span>P</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-indigo-400/80">DATA WRANGLING</span>
+                  <h4 class="skill-name">Pandas</h4>
+                  <p class="skill-desc">DataFrames, aggregation, missing value imputation, indexing</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 94%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-numpy" aria-label="NumPy"><span>Num</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-cyan-400/80">NUMERICAL COMPUTING</span>
+                  <h4 class="skill-name">NumPy</h4>
+                  <p class="skill-desc">Multi-dimensional array vectors, linear algebra, tensor math</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-seaborn" aria-label="Seaborn"><span>S</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-purple-400/80">STATISTICAL VIZ</span>
+                  <h4 class="skill-name">Seaborn</h4>
+                  <p class="skill-desc">Statistical heatmaps, distribution plots, pairplots, regressions</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 88%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-postgres" aria-label="PostgreSQL"><span>PG</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-blue-500/80">RDBMS</span>
+                  <h4 class="skill-name">PostgreSQL</h4>
+                  <p class="skill-desc">Relational database design, indexes, complex subqueries & joins</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 86%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-tableau" aria-label="Tableau"><span>T</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-teal-400/80">VISUAL ANALYTICS</span>
+                  <h4 class="skill-name">Tableau</h4>
+                  <p class="skill-desc">Executive storyboards, geographic heatmaps, KPI drilldowns</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 82%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-excel" aria-label="Excel"><span>X</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-emerald-500/80">SPREADSHEET MODELING</span>
+                  <h4 class="skill-name">Microsoft Excel</h4>
+                  <p class="skill-desc">5+ advanced functions (VLOOKUP, INDEX/MATCH), Pivot Tables</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-jupyter" aria-label="Jupyter Notebook"><span>J</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-orange-400/80">ENVIRONMENT</span>
+                  <h4 class="skill-name">Jupyter Notebook</h4>
+                  <p class="skill-desc">Full notebook-driven exploration, EDA, prototyping, visual analysis, and reproducible experimentation</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="tools" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-github" aria-label="GitHub"><span>GH</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-slate-400">VERSION CONTROL</span>
+                  <h4 class="skill-name">GitHub & Git</h4>
+                  <p class="skill-desc">Collaborative version control, CI workflows, open-source repos</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 88%"></span></div>
+              </div>
+            </div>
+
+            <!-- Category: TECHNICAL AREAS -->
+            <div class="skill-card glass-panel" data-category="areas" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-vision" aria-label="Computer Vision"><span>CV</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-cyan-400/80">DOMAIN</span>
+                  <h4 class="skill-name">Computer Vision</h4>
+                  <p class="skill-desc">Real-time facial detection, Haar Cascades, Face Recognition</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 90%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="areas" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-ml" aria-label="Machine Learning"><span>ML</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-purple-400/80">DOMAIN</span>
+                  <h4 class="skill-name">Machine Learning</h4>
+                  <p class="skill-desc">Supervised classification, clustering, regression models</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 86%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="areas" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-data" aria-label="Data Analysis"><span>DA</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-blue-400/80">DOMAIN</span>
+                  <h4 class="skill-name">Data Analysis & Viz</h4>
+                  <p class="skill-desc">Insight discovery, storytelling charts, seasonal breakdown</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="areas" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-predict" aria-label="Predictive Analytics"><span>PA</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-emerald-400/80">DOMAIN</span>
+                  <h4 class="skill-name">Predictive Analytics</h4>
+                  <p class="skill-desc">Trend estimation, forecasting models & decision support</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 85%"></span></div>
+              </div>
+            </div>
+
+            <div class="skill-card glass-panel" data-category="areas" data-tilt data-tilt-max="14">
+              <div class="skill-card-inner">
+                <div class="skill-icon-wrap">
+                  <div class="skill-logo logo-sql" aria-label="SQL"><span>SQL</span></div>
+                </div>
+                <div class="skill-meta">
+                  <span class="skill-cat font-mono text-[10px] text-cyan-400/80">QUERY LANGUAGE</span>
+                  <h4 class="skill-name">SQL</h4>
+                  <p class="skill-desc">Data definition, manipulation, window functions, schema design</p>
+                </div>
+                <div class="skill-level-bar"><span style="width: 92%"></span></div>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 05. PROJECTS SECTION (BENTO GRID)            -->
+      <!-- ============================================ -->
+      <section id="projects" class="projects-section" aria-label="Featured Projects">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-pill font-mono text-cyan-400">PRODUCTION WORK</span>
+            <h2 class="section-title split-text">
+              From data <span class="gradient-text">to decision.</span>
+            </h2>
+            <p class="section-subtitle">
+              Every project below represents verified engineering work solving tangible real-world problems.
+            </p>
+          </div>
+
+          <div class="bento-projects-container">
+
+            <!-- ========================================== -->
+            <!-- PROJECT 01: FACE RECOGNITION ATTENDANCE -->
+            <!-- ========================================== -->
+            <article class="project-bento-card glass-panel" data-tilt data-tilt-max="6">
+              <div class="bento-card-glow cyan-glow"></div>
+              
+              <div class="project-card-grid">
+                <div class="project-info-col">
+                  <div class="project-tag-strip font-mono">
+                    <span class="badge-project-cat">PROJECT 01 // COMPUTER VISION</span>
+                    <span class="badge-project-date">2026</span>
+                  </div>
+
+                  <h3 class="project-title">Real-Time Face Recognition Attendance System</h3>
+                  
+                  <p class="project-description">
+                    Built an automated attendance solution using OpenCV and face recognition techniques to track student presence in real time with minimal manual effort.
+                  </p>
+
+                  <ul class="project-bullets">
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Implemented <strong>real-time facial detection</strong> and identification for marking attendance without manual records.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Created a <strong>registered student database</strong> and trained recognition logic to validate identities accurately.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Designed a lightweight interface for <strong>attendance logging</strong> and reporting to reduce administrative overhead.</span>
+                    </li>
+                  </ul>
+
+                  <div class="project-tech-badges">
+                    <span class="tech-tag">OpenCV</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Face Recognition</span>
+                    <span class="tech-tag">Automation</span>
+                  </div>
+
+                  <div class="project-action-row">
+                    <a href="https://github.com/AmanKumar9931/Face-Attendance-System" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
+                      <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      <span>Open GitHub</span>
+                    </a>
+                    <span class="project-stat-pill font-mono">
+                      <span>95%+ ACCURACY</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="project-visual-col">
+                  <div class="project-real-photo-wrap glass-panel project-project1-single">
+                    <img src="Project1.png/Screenshot%202026-09-25%20084908.png" alt="Face recognition attendance project screenshot" class="project-real-image" />
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ========================================== -->
+            <!-- PROJECT 02: RAINFALL ANALYTICS DASHBOARD -->
+            <!-- ========================================== -->
+            <article class="project-bento-card glass-panel" data-tilt data-tilt-max="6">
+              <div class="bento-card-glow purple-glow"></div>
+              
+              <div class="project-card-grid">
+                <div class="project-info-col">
+                  <div class="project-tag-strip font-mono">
+                    <span class="badge-project-cat">PROJECT 02 // POWER BI</span>
+                    <span class="badge-project-date">2026</span>
+                  </div>
+
+                  <h3 class="project-title">Rainfall Analytics Dashboard</h3>
+                  
+                  <p class="project-description">
+                    Analyzed 117 years of rainfall dataset to uncover seasonality, regional patterns, and peak monsoon trends across Indian states.
+                  </p>
+
+                  <ul class="project-bullets">
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Modeled <strong>5.92M mm</strong> of rainfall data using <strong>Power BI, DAX, and Power Query</strong> to reveal long-term rainfall trends.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Built cleaned KPI views to compare <strong>month-wise spikes</strong> and seasonality across the annual rainfall cycle.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Translated raw climate data into a <strong>decision-friendly dashboard</strong> with clear, visual summary insights.</span>
+                    </li>
+                  </ul>
+
+                  <div class="project-tech-badges">
+                    <span class="tech-tag">Power BI</span>
+                    <span class="tech-tag">DAX</span>
+                    <span class="tech-tag">Data Modeling</span>
+                    <span class="tech-tag">Analytics</span>
+                  </div>
+
+                  <div class="project-action-row">
+                    <a href="https://github.com/AmanKumar9931/Rainfall-Data-Analysis" target="_blank" rel="noreferrer noopener" class="btn-primary-sm">
+                      <span>Open GitHub</span>
+                    </a>
+                    <span class="project-stat-pill font-mono">
+                      <span>117 YEARS</span>
+                    </span>
+                  </div>
+                </div>
+
+                <div class="project-visual-col">
+                  <div class="project-real-photo-wrap glass-panel project-rainfall-gallery">
+                    <div class="rainfall-feature-card">
+                      <img src="Project2.png/Screenshot%202026-09-25%20233917.png" alt="Rainfall Analytics dashboard screenshot 1" class="project-real-image" />
+                    </div>
+                    <div class="rainfall-mini-cards">
+                      <div class="rainfall-mini-card">
+                        <img src="Project2.png/Screenshot%202026-09-25%20234025.png" alt="Rainfall Analytics dashboard screenshot 2" class="project-real-image" />
+                      </div>
+                      <div class="rainfall-mini-card">
+                        <img src="Project2.png/Screenshot%202026-09-25%20234106.png" alt="Rainfall Analytics dashboard screenshot 3" class="project-real-image" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ========================================== -->
+            <!-- PROJECT 03: RESPONSIVE RESTAURANT WEBSITE  -->
+            <!-- ========================================== -->
+            <article class="project-bento-card glass-panel" data-tilt data-tilt-max="6">
+              <div class="bento-card-glow purple-glow"></div>
+              
+              <div class="project-card-grid">
+                <!-- Info Column -->
+                <div class="project-info-col">
+                  <div class="project-tag-strip font-mono">
+                    <span class="badge-project-cat">PROJECT 03 // WEB DEVELOPMENT</span>
+                    <span class="badge-project-date">MAY 2024</span>
+                  </div>
+
+                  <h3 class="project-title">Responsive Restaurant Ordering & Management Website</h3>
+                  
+                  <p class="project-description">
+                    Created a responsive restaurant website featuring 6 navigation links and a visually engaging landing page with interactive ordering flows.
+                  </p>
+
+                  <ul class="project-bullets">
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Organized the menu into <strong>5 food categories</strong> with <strong>50+ food items</strong>, prices and images.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Enabled an online ordering form with <strong>4 customer input fields</strong> for convenient food selection and order submission.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Customized <strong>15+ UI components</strong> including buttons, navigation elements and content sections using CSS.</span>
+                    </li>
+                    <li>
+                      <span class="bullet-marker">&#x25B9;</span>
+                      <span>Arranged website elements into clear sections with structured content and user-friendly interface components.</span>
+                    </li>
+                  </ul>
+
+                  <!-- Tech Badges -->
+                  <div class="project-tech-badges">
+                    <span class="tech-tag">HTML5</span>
+                    <span class="tech-tag">CSS3</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">Responsive UI</span>
+                    <span class="tech-tag">Form Validation</span>
+                  </div>
+
+                  <!-- CTAs -->
+                  <div class="project-action-row">
+                    <a href="https://github.com/AmanKumar9931" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
+                      <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+                      <span>Open GitHub</span>
+                    </a>
+                    <span class="project-stat-pill font-mono">
+                      <span>50+ ITEMS &middot; 5 CATEGORIES</span>
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Restaurant website screenshots -->
+                <div class="project-visual-col">
+                  <div class="project-restaurant-gallery glass-panel">
+                    <figure class="restaurant-feature-shot">
+                      <img src="project3/Screenshot%202026-10-04%20191755.png" alt="Rasoi House restaurant website homepage" class="project-real-image" />
+                    </figure>
+                    <div class="restaurant-secondary-shots">
+                      <figure class="restaurant-secondary-shot">
+                        <img src="project3/Screenshot%202026-10-04%20191743.png" alt="Rasoi House online meal ordering form" class="project-real-image" />
+                      </figure>
+                      <figure class="restaurant-secondary-shot">
+                        <img src="project3/Screenshot%202026-10-04%20191801.png" alt="Rasoi House restaurant contact page" class="project-real-image" />
+                      </figure>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 06. TRAINING SECTION                         -->
+      <!-- ============================================ -->
+      <section id="training" class="training-section" aria-label="Hands-on Training">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-pill font-mono text-cyan-400">HANDS-ON INTENSIVE</span>
+            <h2 class="section-title split-text">
+              Learning by <span class="gradient-text">building.</span>
+            </h2>
+            <p class="section-subtitle">
+              Applied enterprise data curriculum bridging SQL, Python, Power BI, Tableau, Excel, and AI-assisted workflows.
+            </p>
+          </div>
+
+          <div class="training-card glass-panel" data-tilt data-tilt-max="5">
+            <div class="training-header-row">
+              <div>
+                <span class="font-mono text-cyan-400 text-xs font-bold tracking-wider">INTENSIVE PROGRAM</span>
+                <h3 class="text-2xl font-bold text-white mt-1">Data Analytics Essentials with AI: SQL, Python, Power BI, Tableau and Excel</h3>
+              </div>
+              <div class="training-date-badge font-mono">
+                <span>JUNE 2026 &ndash; JULY 2026</span>
+              </div>
+            </div>
+
+            <!-- Training Pillars & Concrete Learnings -->
+            <div class="training-content-grid">
+              <div class="training-point-card">
+                <div class="point-num font-mono text-cyan-400">01</div>
+                <h4 class="font-semibold text-white">5+ Analytics Tools</h4>
+                <p class="text-sm text-slate-400">Gained practical exposure to 5+ analytics tools including SQL, Power BI and Excel through structured hands-on training.</p>
+              </div>
+
+              <div class="training-point-card">
+                <div class="point-num font-mono text-blue-400">02</div>
+                <h4 class="font-semibold text-white">SQL & Python Wrangling</h4>
+                <p class="text-sm text-slate-400">Explored datasets using SQL queries and Python for data cleaning, transformation, and insight generation across practical datasets.</p>
+              </div>
+
+              <div class="training-point-card">
+                <div class="point-num font-mono text-purple-400">03</div>
+                <h4 class="font-semibold text-white">10+ Power BI Visuals</h4>
+                <p class="text-sm text-slate-400">Produced interactive dashboards in Power BI with 10+ visualizations for data-driven reporting, DAX calculations, and business insights.</p>
+              </div>
+
+              <div class="training-point-card">
+                <div class="point-num font-mono text-emerald-400">04</div>
+                <h4 class="font-semibold text-white">5+ Advanced Excel Functions</h4>
+                <p class="text-sm text-slate-400">Applied Excel techniques including 5+ functions and data-analysis methods to organize, cross-reference, and interpret datasets.</p>
+              </div>
+
+              <div class="training-point-card col-span-full">
+                <div class="point-num font-mono text-cyan-300">05</div>
+                <h4 class="font-semibold text-white">AI-Assisted Analytics</h4>
+                <p class="text-sm text-slate-400">Acquired practical knowledge of AI-assisted analytics across data preparation, feature engineering, and automated visualization storytelling.</p>
+              </div>
+            </div>
+
+            <!-- Tech Chips -->
+            <div class="training-tech-strip">
+              <span class="text-xs font-mono text-slate-400 mr-2">TECH USED:</span>
+              <span class="chip-sm">SQL</span>
+              <span class="chip-sm">Python</span>
+              <span class="chip-sm">Power BI</span>
+              <span class="chip-sm">Power Query</span>
+              <span class="chip-sm">DAX</span>
+              <span class="chip-sm">Tableau</span>
+              <span class="chip-sm">Microsoft Excel</span>
+            </div>
+
+            <div class="project-action-row mt-6">
+              <a href="https://drive.google.com/file/d/1bh7q_MAU-o4bNuouiDLlywOFyzI5kIaF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="btn-primary-sm">
+                <span>View Training Certificate &#8599;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 07. CERTIFICATIONS & CREDENTIALS             -->
+      <!-- ============================================ -->
+      <section id="credentials" class="credentials-section" aria-label="Certifications">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-pill font-mono text-cyan-400">CERTIFIED COMPETENCIES</span>
+            <h2 class="section-title split-text">
+              Credentials.
+            </h2>
+            <p class="section-subtitle">
+              Verified certifications from leading institutions and engineering platforms.
+            </p>
+          </div>
+
+          <div class="credentials-grid">
+
+            <!-- 01: IBM SkillsBuild -->
+            <div class="cert-card glass-panel" data-tilt data-tilt-max="10">
+              <div class="cert-card-header">
+                <span class="cert-num font-mono text-cyan-400">01</span>
+                <span class="cert-date font-mono text-xs text-slate-400">SEPTEMBER 2026</span>
+              </div>
+              <div class="cert-icon-row text-cyan-400">
+                <img src="Certificates/IBM%20SkillsBuild%20Data%20Fundamentals%20Badge.png" alt="IBM SkillsBuild Data Fundamentals badge" class="cert-badge-image" />
+                <span class="font-mono text-xs text-cyan-300">IBM SKILLSBUILD</span>
+              </div>
+              <h3 class="cert-title">Data Fundamentals</h3>
+              <p class="cert-issuer">IBM SkillsBuild</p>
+              <div class="cert-footer font-mono text-xs text-slate-400">
+                <a class="cert-link text-cyan-400" href="https://drive.google.com/file/d/1nuT6UxALM54CQk-tIsiJpi-5OZIxfAMI/view?usp=sharing" target="_blank" rel="noopener noreferrer">VIEW CERTIFICATE &#8599;</a>
+              </div>
+            </div>
+
+            <!-- 02: Infosys Springboard -->
+            <div class="cert-card glass-panel" data-tilt data-tilt-max="10">
+              <div class="cert-card-header">
+                <span class="cert-num font-mono text-blue-400">02</span>
+                <span class="cert-date font-mono text-xs text-slate-400">AUGUST 2026</span>
+              </div>
+              <div class="cert-icon-row text-blue-400">
+                <img src="Certificates/Infosys%20Springboard%20Circular%20Badge.png" alt="Infosys Springboard badge" class="cert-badge-image" />
+                <span class="font-mono text-xs text-blue-300">INFOSYS SPRINGBOARD</span>
+              </div>
+              <h3 class="cert-title">Database Management System Part-1</h3>
+              <p class="cert-issuer">Infosys Springboard</p>
+              <div class="cert-footer font-mono text-xs text-slate-400">
+                <a class="cert-link text-blue-400" href="https://drive.google.com/file/d/1b5IGhhpcrk2P8RQCx-DCHOI9BW76yRsc/view?usp=sharing" target="_blank" rel="noopener noreferrer">VIEW CERTIFICATE &#8599;</a>
+              </div>
+            </div>
+
+            <!-- 03: Coding Tantra -->
+            <div class="cert-card glass-panel" data-tilt data-tilt-max="10">
+              <div class="cert-card-header">
+                <span class="cert-num font-mono text-purple-400">03</span>
+                <span class="cert-date font-mono text-xs text-slate-400">JANUARY 2025</span>
+              </div>
+              <div class="cert-icon-row text-purple-400">
+                <img src="Certificates/Coding%20Tantra%20Circular%20Badge%20Logo.png" alt="Coding Tantra badge" class="cert-badge-image" />
+                <span class="font-mono text-xs text-purple-300">CODING TANTRA</span>
+              </div>
+              <h3 class="cert-title">Introduction to DSA</h3>
+              <p class="cert-issuer">Coding Tantra</p>
+              <div class="cert-footer font-mono text-xs text-slate-400">
+                <a class="cert-link text-purple-400" href="https://drive.google.com/file/d/18mXkZ_ynEua3OFkt9yu05C2x1dFhjUI5/view?usp=sharing" target="_blank" rel="noopener noreferrer">VIEW CERTIFICATE &#8599;</a>
+              </div>
+            </div>
+
+            <!-- 04: Skillera -->
+            <div class="cert-card glass-panel" data-tilt data-tilt-max="10">
+              <div class="cert-card-header">
+                <span class="cert-num font-mono text-emerald-400">04</span>
+                <span class="cert-date font-mono text-xs text-slate-400">AUGUST 2024</span>
+              </div>
+              <div class="cert-icon-row text-emerald-400">
+                <img src="Certificates/Skillera%20Gradient%20Circle%20Logo.png" alt="Skillera badge" class="cert-badge-image" />
+                <span class="font-mono text-xs text-emerald-300">SKILLERA</span>
+              </div>
+              <h3 class="cert-title">Leadership Fundamentals</h3>
+              <p class="cert-issuer">Skillera</p>
+              <div class="cert-footer font-mono text-xs text-slate-400">
+                <a class="cert-link text-emerald-400" href="https://drive.google.com/file/d/1pl-_h_YiySO9jZaP6S6nWhnMTDpgloVb/view?usp=sharing" target="_blank" rel="noopener noreferrer">VIEW CERTIFICATE &#8599;</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 08. ACHIEVEMENTS SECTION                     -->
+      <!-- ============================================ -->
+      <section id="achievements" class="achievements-section" aria-label="Achievements">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-pill font-mono text-cyan-400">ACHIEVEMENTS</span>
+            <h2 class="section-title split-text">
+              Achievements.
+            </h2>
+          </div>
+
+          <div class="achievements-grid">
+            
+            <!-- Achievement 01: 5-Star Python HackerRank -->
+            <div class="achievement-card glass-panel" data-tilt data-tilt-max="8">
+              <div class="achievement-body">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-white">5-Star Python Badge on HackerRank</h3>
+                  <span class="badge-timeline font-mono">AUGUST 2025 &ndash; PRESENT</span>
+                </div>
+                <p class="text-slate-300 text-sm">
+                  "Earned a 5-Star Python Badge on HackerRank, demonstrating strong Python programming practice, object modeling, string manipulation and algorithm execution."
+                </p>
+                <div class="achievement-tag font-mono text-xs text-yellow-400 mt-4">
+                  RANK: TOP TIER PYTHON PROFICIENCY
+                </div>
+              </div>
+            </div>
+
+            <!-- Achievement 02: Technical Event Coordinator -->
+            <div class="achievement-card glass-panel" data-tilt data-tilt-max="8">
+              <div class="achievement-body">
+                <div class="flex justify-between items-start mb-2">
+                  <h3 class="text-xl font-bold text-white">Technical Event Coordinator</h3>
+                  <span class="badge-timeline font-mono">SEPTEMBER 2024 &ndash; PRESENT</span>
+                </div>
+                <p class="text-slate-300 text-sm">
+                  "Volunteered as a technical event coordinator, managing logistics for department technical events, hackathons, and technical symposiums at Lovely Professional University."
+                </p>
+                <div class="achievement-tag font-mono text-xs text-cyan-400 mt-4">
+                  LOCATION: LOVELY PROFESSIONAL UNIVERSITY
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 09. EDUCATION SECTION                        -->
+      <!-- ============================================ -->
+      <section id="education" class="education-section" aria-label="Education History">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-pill font-mono text-cyan-400">ACADEMICS</span>
+            <h2 class="section-title split-text">
+              Education.
+            </h2>
+          </div>
+
+          <div class="education-grid">
+            
+            <!-- University: Lovely Professional University -->
+            <article class="edu-card card-primary glass-panel" data-tilt data-tilt-max="6">
+              <div class="edu-card-header">
+                <div>
+                  <span class="edu-level">BACHELOR OF TECHNOLOGY</span>
+                  <h3 class="edu-school">Lovely Professional University</h3>
+                  <p class="edu-degree">Computer Science and Engineering</p>
+                  <p class="edu-specialization">Specialization: Data Science</p>
+                </div>
+                
+                <!-- Circular Animated CGPA Ring -->
+                <div class="cgpa-ring-wrapper">
+                  <svg class="cgpa-svg" viewBox="0 0 100 100">
+                    <circle class="ring-bg" cx="50" cy="50" r="40" />
+                    <circle class="ring-progress" cx="50" cy="50" r="40" style="stroke-dashoffset: 40;" />
+                  </svg>
+                  <div class="cgpa-text">
+                    <span class="cgpa-number">8.4</span>
+                    <span class="cgpa-sub">CGPA</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="edu-card-footer">
+                <div class="edu-location">
+                  <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>Phagwara, Punjab</span>
+                </div>
+                <div class="edu-date">August 2024 &ndash; Present</div>
+              </div>
+            </article>
+
+            <!-- Intermediate: Vivekanand International Public School -->
+            <article class="edu-card glass-panel" data-tilt data-tilt-max="6">
+              <div class="edu-card-header">
+                <div>
+                  <span class="edu-level">SENIOR SECONDARY</span>
+                  <h3 class="edu-school">Vivekanand International Public School</h3>
+                  <p class="edu-degree">Intermediate</p>
+                  <p class="edu-specialization">Senior Secondary Education</p>
+                </div>
+
+                <div class="score-badge" aria-label="Score: 79 percent">
+                  <span class="score-value">79%</span>
+                  <span class="score-label">PERCENTAGE</span>
+                </div>
+              </div>
+
+              <div class="edu-card-footer">
+                <div class="edu-location">
+                  <svg aria-hidden="true" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  <span>Chhapra, Bihar</span>
+                </div>
+                <div class="edu-date">April 2023 &ndash; March 2024</div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 10. DATA SCIENCE JOURNEY (VERTICAL TIMELINE) -->
+      <!-- ============================================ -->
+      <section id="journey" class="journey-section" aria-label="Career Roadmap">
+        <div class="section-container">
+          <div class="section-header text-center">
+            <span class="section-pill font-mono text-cyan-400">CHRONOLOGY</span>
+            <h2 class="section-title split-text">
+              Data Science <span class="gradient-text">Journey.</span>
+            </h2>
+            <p class="section-subtitle">
+              The continuous ascent from foundational computer science to real-world machine learning engineering.
+            </p>
+          </div>
+
+          <div class="timeline-container">
+            <div class="timeline-spine" id="timeline-spine"></div>
+
+            <!-- Milestone 1 -->
+            <div class="timeline-item" data-year="2024">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-cyan-400">2024</span>
+                  <span class="timeline-badge">FOUNDATION</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Started B.Tech in Computer Science & Engineering</h4>
+                <p class="text-sm text-slate-300 mt-2">Commenced B.Tech at Lovely Professional University with specialization in Data Science, establishing solid foundations in mathematics and algorithms.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 2 -->
+            <div class="timeline-item" data-year="2024">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-cyan-400">2024</span>
+                  <span class="timeline-badge">WEB UI</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Started Building Web Development Projects</h4>
+                <p class="text-sm text-slate-300 mt-2">Engineered responsive interfaces including the 50+ item restaurant ordering system, mastering semantic HTML5, CSS3 layout architecture, and ES6 JavaScript.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 3 -->
+            <div class="timeline-item" data-year="2025">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-blue-400">2025</span>
+                  <span class="timeline-badge">ALGORITHMS</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Strengthened Python and DSA Skills</h4>
+                <p class="text-sm text-slate-300 mt-2">Completed formal coursework in Data Structures & Algorithms (Coding Tantra) and dove deep into advanced Python, NumPy array computation, and object architecture.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 4 -->
+            <div class="timeline-item" data-year="2025">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-yellow-400">2025</span>
+                  <span class="timeline-badge text-yellow-300">HONOR</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Earned 5-Star Python Badge on HackerRank</h4>
+                <p class="text-sm text-slate-300 mt-2">Demonstrated consistent algorithmic mastery and high-speed problem-solving by attaining the prestigious 5-Star badge on HackerRank.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 5 -->
+            <div class="timeline-item" data-year="2026">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-purple-400">2026</span>
+                  <span class="timeline-badge">AI / CV</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Built AI Facial Recognition Attendance System</h4>
+                <p class="text-sm text-slate-300 mt-2">Deployed real-time computer vision attendance tracking with OpenCV, identifying 20+ registered students with 95%+ accuracy and cutting manual effort by 50%.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 6 -->
+            <div class="timeline-item" data-year="2026">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-cyan-400">2026</span>
+                  <span class="timeline-badge">BIG DATA BI</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Built Interactive Rainfall Analytics Dashboard</h4>
+                <p class="text-sm text-slate-300 mt-2">Modeled 117 years of India rainfall records (5.92M mm) using Power BI, DAX, and Power Query, deriving regional seasonality and peak July insights.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 7 -->
+            <div class="timeline-item" data-year="2026">
+              <div class="timeline-node">
+                <span class="node-ring"></span>
+                <span class="node-core"></span>
+              </div>
+              <div class="timeline-card glass-panel" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-emerald-400">2026</span>
+                  <span class="timeline-badge">UPSKILLING</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Completed Data Analytics Essentials with AI Training</h4>
+                <p class="text-sm text-slate-300 mt-2">Mastered 5+ enterprise tools (SQL, Python, Power BI, Tableau, Excel) and integrated AI-assisted analytics pipelines for automated reporting.</p>
+              </div>
+            </div>
+
+            <!-- Milestone 8 -->
+            <div class="timeline-item timeline-current" data-year="PRESENT">
+              <div class="timeline-node">
+                <span class="node-ring ring-pulse"></span>
+                <span class="node-core core-cyan"></span>
+              </div>
+              <div class="timeline-card glass-panel highlight-accent" data-tilt data-tilt-max="8">
+                <div class="timeline-header font-mono">
+                  <span class="timeline-year text-cyan-300">PRESENT</span>
+                  <span class="timeline-badge text-cyan-400 font-bold">CURRENT FOCUS</span>
+                </div>
+                <h4 class="text-lg font-bold text-white mt-1">Developing Skills in Data Science, Machine Learning and Analytics</h4>
+                <p class="text-sm text-slate-300 mt-2">Actively exploring advanced neural architectures, computer vision research, predictive modeling, and scalable database systems. Open to internships and collaborative projects.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 11. CONTACT SECTION                          -->
+      <!-- ============================================ -->
+      <section id="contact" class="contact-section" aria-label="Contact Aman Kumar">
+        <div class="section-container">
+          <div class="contact-grid">
+            
+            <!-- Left Info Panel -->
+            <div class="contact-info-col">
+              <span class="section-pill font-mono text-cyan-400">DIRECT DISPATCH</span>
+              <h2 class="section-title split-text">
+                Have data?<br>
+                <span class="gradient-text">Let's build insight.</span>
+              </h2>
+              <p class="contact-lead text-slate-300">
+                "Let's connect and build something meaningful with data."
+              </p>
+
+              <div class="contact-cards-stack">
+                <!-- Email Card with Copy button -->
+                <div class="contact-item-card glass-panel">
+                  <div class="contact-icon text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="font-mono text-xs text-slate-400">EMAIL ADDRESS</span>
+                    <a href="mailto:amanrajputjee122@gmail.com" class="contact-link font-mono text-cyan-300 hover:underline">
+                      amanrajputjee122@gmail.com
+                    </a>
+                  </div>
+                  <button class="copy-email-btn" id="copy-email-btn" aria-label="Copy email address to clipboard" data-email="amanrajputjee122@gmail.com">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </button>
+                </div>
+
+                <!-- Location Card -->
+                <div class="contact-item-card glass-panel">
+                  <div class="contact-icon text-blue-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="font-mono text-xs text-slate-400">LOCATION</span>
+                    <div class="text-white font-medium">Phagwara, Punjab, India</div>
+                  </div>
+                </div>
+
+                <!-- Phone / Mobile Card -->
+                <div class="contact-item-card glass-panel">
+                  <div class="contact-icon text-emerald-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="font-mono text-xs text-slate-400">MOBILE / WHATSAPP</span>
+                    <a href="tel:+919006288550" class="contact-link font-mono text-emerald-300 hover:underline">
+                      +91 - 9006288550
+                    </a>
+                  </div>
+                  <button class="copy-email-btn" id="copy-phone-btn" aria-label="Copy phone number to clipboard" data-phone="+919006288550">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                  </button>
+                </div>
+
+                <!-- Professional Network Links -->
+                <div class="contact-item-card glass-panel">
+                  <div class="contact-icon text-purple-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="font-mono text-xs text-slate-400">CHANNELS</span>
+                    <div class="flex space-x-4 mt-1 font-mono text-sm">
+                      <a href="http://www.linkedin.com/in/aman79/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline">LinkedIn &#x2197;</a>
+                      <a href="https://github.com/AmanKumar9931" target="_blank" rel="noopener noreferrer" class="text-slate-300 hover:underline">GitHub &#x2197;</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Verified CV / Resume Card -->
+                <div class="contact-item-card glass-panel" style="border-color: rgba(0, 240, 255, 0.3); background: rgba(0, 240, 255, 0.04);">
+                  <div class="contact-icon text-cyan-400">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                  </div>
+                  <div class="contact-detail">
+                    <span class="font-mono text-xs text-slate-400">OFFICIAL RESUME</span>
+                    <a href="https://drive.google.com/file/d/1bGQkqpgZ0EffJX7KNTA0qETo5NYR_Jd6/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="contact-link font-mono text-cyan-400 font-bold hover:underline">
+                      View on Google Drive &#x2197;
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Modern Glass Contact Form -->
+            <div class="contact-form-col">
+              <div class="glass-form-card glass-panel">
+                <form id="contact-form" class="space-y-4" novalidate>
+                  <div class="form-header">
+                    <h3 class="text-xl font-bold text-white">Send Direct Transmission</h3>
+                    <p class="text-xs text-slate-400 font-mono">TARGET: amanrajputjee122@gmail.com</p>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-name" class="form-label font-mono text-xs">YOUR NAME</label>
+                    <div class="input-wrap">
+                      <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Alex Mercer" required>
+                      <div class="input-glow"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-email" class="form-label font-mono text-xs">YOUR EMAIL</label>
+                    <div class="input-wrap">
+                      <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. alex@company.com" required>
+                      <div class="input-glow"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-subject" class="form-label font-mono text-xs">SUBJECT</label>
+                    <div class="input-wrap">
+                      <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. Data Science Opportunity / Project Inquiry" required>
+                      <div class="input-glow"></div>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="form-message" class="form-label font-mono text-xs">MESSAGE</label>
+                    <div class="input-wrap">
+                      <textarea id="form-message" name="message" rows="4" class="form-input" placeholder="Share your dataset, opportunity details, or ideas..." required></textarea>
+                      <div class="input-glow"></div>
+                    </div>
+                  </div>
+
+                  <button type="submit" id="submit-btn" class="btn-primary w-full text-center magnetic-btn">
+                    <span>Send Message &#x2197;</span>
+                    <div class="btn-glow"></div>
+                  </button>
+
+                  <div id="form-status" class="form-status-msg font-mono text-xs text-center hidden"></div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================================ -->
+      <!-- 12. FOOTER                                   -->
+      <!-- ============================================ -->
+      <footer class="site-footer">
+        <div class="section-container">
+          <div class="footer-top-row">
+            <div>
+              <div class="footer-brand font-syne text-3xl font-extrabold tracking-tight">
+                Aman Kumar<span class="text-cyan-400">.</span>
+              </div>
+              <p class="footer-tagline text-slate-400 text-sm mt-1 font-mono">
+                Data Science &middot; AI &middot; Analytics
+              </p>
+            </div>
+
+            <!-- Quick Footer Links -->
+            <div class="footer-nav-links font-mono text-xs">
+              <!-- <a href="#hero">Home</a> -->
+              <a href="#hero">About</a>
+              <a href="#skills">Skills</a>
+              <a href="#projects">Projects</a>
+              <a href="#training">Training</a>
+              <a href="#credentials">Credentials</a>
+              <a href="#education">Education</a>
+              <a href="#contact">Contact</a>
+            </div>
+
+            <!-- Socials -->
+            <div class="footer-social-links">
+              <a href="https://github.com/AmanKumar9931" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="GitHub">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+              </a>
+              <a href="http://www.linkedin.com/in/aman79/" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="LinkedIn">
+                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              </a>
+              <a href="mailto:amanrajputjee122@gmail.com" class="footer-social-btn" aria-label="Email">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-bottom-row font-mono text-xs">
+            <div class="text-slate-400">
+              "Turning data into insights."
+            </div>
+            <div class="text-slate-500">
+              &copy; 2026 Aman Kumar. All rights reserved. Lovely Professional University.
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <!-- Toast Notification Container -->
+      <div id="toast" class="toast-popup font-mono text-xs" role="alert" aria-live="polite"></div>
+
+    </div>
+  </main>
+
+  <!-- External High-Performance CDN Libraries -->
+  <!-- Three.js (3D Neural Particles & Visualizations) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <!-- GSAP Core & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <!-- Lenis Smooth Scroll -->
+  <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+  <!-- SplitType for Text Splits -->
+  <script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+  <!-- Vanilla Tilt (3D Card Perspective) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <!-- Main Application Script -->
+  <script src="js/main.js?v=intro-video-controls"></script>
+</body>
+</html>
